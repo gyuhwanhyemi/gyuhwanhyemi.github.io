@@ -199,7 +199,7 @@
                       </div>
                 </div>
                 <!-- section-04 -->
-                  <div class="swiper-container bg-white w-100">
+                  <div class="swiper-container mySwiper bg-white w-100">
                     <div class="w-100 d-flex flex-column align-items-center px-5">
                         <div class="mt-8 mb-7">
                             <p class="primary-300 kr-medium font-size-2xlarge text-center">
@@ -549,6 +549,18 @@
 
         <!-- PlugIn -->
         <script type="module">
+            var swiper = new Swiper ( '.mySwiper',{
+                autoHeight: true,
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                pagination:{
+                    el: '.swiper-pagination'
+                    clickable: true,
+                },
+                loop: true
+            })
             const swiper01 = new Swiper(
                 '.swiper-custom-01',{
                 autoHeight: true,
@@ -562,7 +574,8 @@
                 },
                 loop: true,
             });
-            const swiper02 = new Swiper('.swiper-custom-02',{
+            const swiper02 = new Swiper('
+                .swiper-custom-02',{
                 navigation: {
                     nextEl: '.swiper-button-next',
                     prevEl: '.swiper-button-prev',
